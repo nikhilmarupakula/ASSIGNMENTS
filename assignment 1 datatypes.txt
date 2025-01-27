@@ -1,0 +1,40 @@
+1. Jupyter Notebook and Data Types
+Write a program in Jupyter Notebook to declare variables of different data types (integer, float, string, and boolean). Print each variable and its type.
+
+program:
+#variable of different datatypes
+#integer
+a = 10
+print(a)
+print(type(a))
+
+output:
+10
+<class 'int'>
+
+#string
+c = "HELLO WORLD"
+print(c)
+print(type(c))
+
+output:
+HELLO WORLD
+<class 'str'>
+
+#float
+b = 82.678
+print(b)
+print(type(b))
+
+output:
+82.678
+<class 'float'>
+
+#boolean
+d = True
+print(d)
+print(type(d))
+
+output:
+True
+<class 'bool'>
