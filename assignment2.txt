@@ -1,0 +1,63 @@
+******************List***************
+#print the list
+my_list=[1, 'hello', 34.4334, True, 24]
+print("Original list:", my_list)
+output:
+Original list: [1, 'hello', 34.4334, True, 24]
+
+#indexing list access
+print(my_list[2])
+output:
+34.4334
+
+#apending list
+my_list.append(9)
+print("after appending:", my_list)
+output:
+after appending: [1, 'hello', 34.4334, True, 24, 9]
+
+#removing element from list
+my_list.remove(9)
+print("after removing:", my_list)
+output:
+after removing: [1, 'hello', 34.4334, True, 24]
+
+*************Tuple******************
+#print tuple
+my_tuple=[1, 'hello', 34.4334, True]
+print("Original tuple:", my_tuple)
+output:
+Original tuple: [1, 'hello', 34.4334, True]
+
+#indexing 1 element in tuple
+my_tuple=[1, 'hello', 34.4334, True]
+print(my_tuple[1])
+output:
+hello
+
+#append element in tuple
+my_tuple.append('python')
+print("after appending:", my_tuple)
+output:
+after appending: [1, 'hello', 34.4334, True, 'python', 'python', 'python', 'python', 'python']
+
+*********************Dict*******************
+
+#print dict
+my_dict={'name':'kalyan', 'age':20, 'place':'hyderabad hakimpet', 'pincode':500087}
+print("Original dict:", my_dict)
+output:
+Original dict: {'name': 'kalyan', 'age': 20, 'place': 'hyderabad hakimpet', 'pincode': 500087}
+
+#modifying dict
+my_dict['age']=19
+print("After modifying dict:", my_dict)
+output:
+After modifying dict: {'name': 'kalyan', 'age': 19, 'place': 'hyderabad hakimpet', 'pincode': 500087}
+
+#finding the modified value
+age = my_dict['age']
+print("after finding the modified age:", my_dict)
+output:
+after finding the modified age: {'name': 'kalyan', 'age': 19, 'place': 'hyderabad hakimpet', 'pincode': 500087}
+​
