@@ -1,0 +1,53 @@
+Write a Python script that:
+1. Tokenizes a sample paragraph into words and sentences.
+program:
+
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+# Download the necessary NLTK resources
+nltk.download('punkt')
+
+def tokenize_text(text):
+    # Tokenize the text into sentences
+    sentences = sent_tokenize(text)
+    
+    # Tokenize the text into words
+    words = word_tokenize(text)
+    
+    return sentences, words
+
+# Example usage
+text = "This is a sample paragraph. It contains multiple sentences. Tokenization is fun!"
+sentences, words = tokenize_text(text)
+
+print("Sentences:")
+for sentence in sentences:
+    print(sentence)
+
+print("\nWords:")
+for word in words:
+    print(word)
+
+output:
+Sentences:
+This is a sample paragraph.
+It contains multiple sentences.
+Tokenization is fun!
+
+Words:
+This
+is
+a
+sample
+paragraph
+.
+It
+contains
+multiple
+sentences
+.
+Tokenization
+is
+fun
+!
