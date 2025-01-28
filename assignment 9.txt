@@ -1,0 +1,23 @@
+Text Cleaning Lowercasing Removing Special Characters - Coding Assignment
+Assignment:
+Write a Python function to clean a given text by removing special characters and converting it to lowercase. Test it with the input: 'Hello, World! Welcome to NLP 101.'
+
+program:
+import re
+
+def clean_text(text):
+    # Remove special characters using regex
+    text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+    
+    # Convert text to lowercase
+    text = text.lower()
+    
+    return text
+
+# Test the function with the provided input
+input_text = "Hello, World! Welcome to NLP 101."
+cleaned_text = clean_text(input_text)
+print(cleaned_text)
+
+output:
+hello world welcome to nlp 101
