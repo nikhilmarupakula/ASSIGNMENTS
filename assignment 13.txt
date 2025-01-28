@@ -1,0 +1,31 @@
+Part of Speech Tagging using SpaCy - Coding Assignment
+Assignment:
+Write a Python script to perform part-of-speech tagging on the sentence: 'NLP is amazing and fun to learn.' using Spacy.
+
+program:
+import spacy
+
+# Load the SpaCy model
+nlp = spacy.load('en_core_web_sm')
+
+def pos_tagging(text):
+    # Process the text using SpaCy
+    doc = nlp(text)
+    
+    # Print the part-of-speech tags for each token
+    for token in doc:
+        print(f'{token.text}: {token.pos_}')
+
+# Example usage
+text = "NLP is amazing and fun to learn."
+pos_tagging(text)
+
+output:
+NLP: PROPN
+is: AUX
+amazing: ADJ
+and: CCONJ
+fun: ADJ
+to: PART
+learn: VERB
+.: PUNCT
