@@ -1,0 +1,35 @@
+write a python program to calculate the frequency of each word in a give text. Print the words and their corresponding counts
+program:
+def word_frequency(text):
+    # Remove punctuation and convert text to lowercase
+    text = text.lower()
+    for char in '-.,\n':
+        text = text.replace(char, ' ')
+    
+    # Split the text into words
+    words = text.split()
+    
+    # Create a dictionary to store word frequencies
+    word_count = {}
+    
+    # Count the frequency of each word
+    for word in words:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    
+    # Print the words and their corresponding counts
+    for word, count in word_count.items():
+        print(f'{word}: {count}')
+
+# Example usage
+text = "This is a sample text. This text is just a sample."
+word_frequency(text) 
+output:
+this: 2
+is: 2
+a: 2
+sample: 2
+text: 2
+just: 1
