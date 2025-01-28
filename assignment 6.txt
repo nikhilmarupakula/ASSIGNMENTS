@@ -1,0 +1,69 @@
+# Write a Python program to using NLTK and Spacy Convert text to lowercase.
+# program:
+
+import nltk
+import spacy
+
+# Load spaCy's English language model
+nlp = spacy.load("en_core_web_sm")
+
+def convert_to_lowercase(text):
+    """Converts text to lowercase using spaCy."""
+
+    # Process the text with spaCy
+    doc = nlp(text)
+
+    # Join the lowercase tokens back into a string
+    lowercase_text = " ".join([token.text.lower() for token in doc])
+    
+    return lowercase_text
+
+# Example usage
+text = "This is an Example Sentence."
+lowercase_text = convert_to_lowercase(text)
+print(lowercase_text)  # Output: this is an example sentence.
+
+output:
+this is an example sentence .
+
+-------------------------------------------
+
+# Write a Python program to using NLTK and Spacy Remove stopwords using NLT
+# program:
+
+import nltk
+import spacy
+
+# Download required NLTK resources if you haven't already
+nltk.download('punkt')
+nltk.download('stopwords')
+
+# Load spaCy's English language model (optional, for other processing if needed)
+nlp = spacy.load("en_core_web_sm")  
+
+def remove_stopwords_nltk(text):
+    """Removes stop words from text using NLTK."""
+
+    # Tokenize the text using NLTK
+    tokens = nltk.word_tokenize(text)
+
+    # Remove stop words using NLTK
+    stop_words = set(nltk.corpus.stopwords.words('english'))
+    filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
+    
+    # Join the filtered tokens back into a string
+    processed_text = " ".join(filtered_tokens)
+    
+    return processed_text
+
+# Example usage
+text = "This is an example sentence with some stop words."
+processed_text = remove_stopwords_nltk(text)
+print(processed_text)  # Output: example sentence stop words.
+
+output:
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+example sentence stop words .
